@@ -57,3 +57,12 @@ if( $image ) {
 		</header><!--.grid-col -->
 	</div><!--.grid -->
 </div><!--.site-featured-image -->
+
+<?php
+	if ( has_post_thumbnail() ) {
+		$featured_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' );
+		$featured_image_url = $featured_image_url[0];
+
+		echo '<div class="site-featured-image" style="background-image: url(' . $featured_image_url . ');"></div>';
+	}
+?>
