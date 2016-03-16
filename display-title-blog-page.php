@@ -13,3 +13,5 @@
 		echo get_the_title();
 	}
 ?>
+
+<?php single_post_title(); ?>
