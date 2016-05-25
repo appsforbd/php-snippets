@@ -1,4 +1,15 @@
 <?php
+//Add to functions.php
+/**
+ * Enable default taxonomies for Attachments
+ */
+function dhali_register_taxonomy() {
+	register_taxonomy_for_object_type( 'category', 'attachment' );
+}
+add_action( 'init', 'dhali_register_taxonomy' );
+?>
+
+<?php
 /**
  * Displays Attachment by category
  *
