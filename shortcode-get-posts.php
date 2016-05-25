@@ -1,3 +1,10 @@
+<?php
+/**
+ * Generates Shortcodes
+ *
+ * @package dhali
+ */
+
 // Displays Features Grid Shortcode
 function dhali_features_func() {
 
