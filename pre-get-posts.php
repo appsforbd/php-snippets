@@ -21,3 +21,15 @@ function et_post( $query ) {
 	}
 }
 add_action( 'pre_get_posts', 'et_post', 1 );
+
+/**
+ * Exclude Categories from Blog Article, Insights, Newsletter
+ */
+function wroten_post( $query ) {
+	if ( is_home() && $query->is_main_query() ) {
+		// Display all posts
+		$query->set( 'category__not_in', array( 8, 9, 10 ) );
+		return;
+	}
+}
+add_action( 'pre_get_posts', 'wroten_post', 1 );
