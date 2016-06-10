@@ -1,20 +1,17 @@
 // Post Thumbnail of Parent Or Current Post w/ Default Image
-<?php if ( has_post_thumbnail( $post->post_parent, 'post-thumbnail' ) ) {
-	echo get_the_post_thumbnail( $post->post_parent, 'post-thumbnail' );
+<?php if ( has_post_thumbnail( $post->ID, 'post-thumbnail' ) ) {
+	echo get_the_post_thumbnail( $post->ID, 'post-thumbnail' );
+	}
+	elseif ( has_post_thumbnail( $post->post_parent, 'post-thumbnail' ) ) {
+		echo get_the_post_thumbnail( $post->post_parent, 'post-thumbnail' );
 	}
 	else {
-		if ( has_post_thumbnail( $post->ID, 'post-thumbnail' ) ) {
-			the_post_thumbnail('post-thumbnail', array( 'class' => 'media-fluid' ));
-		}
-	else {
-			echo '<img src="'. get_template_directory_uri().'/images/feature/page-feature.jpg" alt="'. get_the_title() .'" class="media-fluid">';
-		}
+		echo '<img src="'. get_template_directory_uri().'/images/feature/laptop-browsing-2000x475.jpg" alt="'. get_the_title() .'" class="media-fluid">';
 	}
 ?>
 
 //Get Post Thumbnail URL of Parent Or Current Post w/ Default Image
-<?php
-	if ( has_post_thumbnail( $post->ID, 'post-thumbnail' ) ) {
+<?php	if ( has_post_thumbnail( $post->ID, 'post-thumbnail' ) ) {
 		$featured_image_url = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'post-thumbnail' );
 		$featured_image_url = $featured_image_url[0];
 	}
