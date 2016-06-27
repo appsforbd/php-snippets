@@ -30,3 +30,17 @@ if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(
 <?php $i++; endwhile; wp_reset_postdata(); else : ?>
 	<p><?php _e( 'Sorry, no recipes at this moment.' ); ?></p>
 <?php endif; echo '</div>';?>
+
+--------------------------------------------------
+
+		<div class="distributor-items">
+			<div class="row">
+				<?php
+					$i = 1;
+					foreach ( $distributors as $distributor ) {
+							BuildDistributor( $distributor );
+							if( $i % 4 == 0 ) { echo '</div><div class="row">'; } $i++;
+					}
+				?>
+			</div>
+		</div>
