@@ -1,6 +1,4 @@
 	<?php
-	// TEstingd;fljasd;fljl;jl;jl;j;l
-
 	$wp_customize->add_setting('logo_setting');
 
 	$wp_customize->add_control( new WP_Customize_Cropped_Image_Control( $wp_customize, 'logo_setting', array(
