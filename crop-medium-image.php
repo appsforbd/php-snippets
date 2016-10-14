@@ -1,3 +1,4 @@
+<?php 
 /**
  * Force Crop on medium size image
  */
@@ -6,3 +7,5 @@ if ( false === get_option( "medium_crop" ) ) {
 } else {
 	update_option("medium_crop", "1");
 }
+
+?>
