@@ -1,3 +1,5 @@
+<?php
+
 /**
  * Change Query on Post Type
  */
