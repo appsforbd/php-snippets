@@ -1,6 +1,6 @@
 <?php
 /**
- * Displays the title for the homepage
+ * Filters the title for the homepage
  */
 function dhali_welcome_title( $title, $id ) {
 	if ( is_front_page() && in_the_loop() ) {
