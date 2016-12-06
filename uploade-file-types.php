@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Allows .vcf files to be uploaded through Media Library
  */

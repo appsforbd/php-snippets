@@ -1,5 +1,4 @@
-<?php 
-
+<?php
 /**
  * Adds sort_order field to product_cat Taxonomy and category Taxonomy
  *

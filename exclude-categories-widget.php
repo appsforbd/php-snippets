@@ -18,5 +18,3 @@ function exclude_recent_posts($args ) {
 	return $args ;
 }
 add_filter("widget_posts_args","exclude_recent_posts");
-
-?>

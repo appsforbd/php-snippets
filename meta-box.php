@@ -2,7 +2,7 @@
 /**
  * Displays Event Meta Box
  *
- * @link https://codex.wordpress.org/Template_Hierarchy
+ * @link https://developer.wordpress.org/reference/functions/add_meta_box/
  *
  * @package dhali
  */

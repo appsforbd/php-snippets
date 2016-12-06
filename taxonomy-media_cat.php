@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Register a Taxonomy media_cat.
  *

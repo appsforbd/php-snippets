@@ -1,4 +1,9 @@
 <?php
+/**
+ * Woothemes features template
+ *
+ */
+
 
 add_action('woothemes_features_item_template', 'woo_features_template_order');
 function woo_features_template_order ( $tpl ) {

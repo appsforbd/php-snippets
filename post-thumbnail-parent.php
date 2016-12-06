@@ -1,5 +1,16 @@
+<?php
+/**
+ * Get Post Thumbnail
+ *
+ * @link https://developer.wordpress.org/reference/functions/has_post_thumbnail/
+ *
+ * @package dhali
+ */
+?>
+
+<?php
 // Post Thumbnail of Parent Or Current Post w/ Default Image
-<?php if ( has_post_thumbnail( $post->ID, 'post-thumbnail' ) ) {
+if ( has_post_thumbnail( $post->ID, 'post-thumbnail' ) ) {
 	echo get_the_post_thumbnail( $post->ID, 'post-thumbnail' );
 	}
 	elseif ( has_post_thumbnail( $post->post_parent, 'post-thumbnail' ) ) {
@@ -10,8 +21,9 @@
 	}
 ?>
 
+<?php
 //Get Post Thumbnail URL of Parent Or Current Post w/ Default Image
-<?php	if ( has_post_thumbnail( $post->ID, 'post-thumbnail' ) ) {
+if ( has_post_thumbnail( $post->ID, 'post-thumbnail' ) ) {
 		$featured_image_url = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'post-thumbnail' );
 		$featured_image_url = $featured_image_url[0];
 	}

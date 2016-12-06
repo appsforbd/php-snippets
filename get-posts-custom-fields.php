@@ -1,4 +1,11 @@
 <?php
+
+/*
+ * Get Custom Fields
+ *
+ */
+
+
 $args = array(
 	'posts_per_page'	=> -1,
 	'category_name'		=> 'courses',
@@ -22,9 +29,3 @@ foreach ( $posts as $post ) : setup_postdata( $post ); ?>
 </li>
 
 <?php endforeach;	wp_reset_postdata(); ?>
-
-
-<?php
-	// Set Custom Field to variable
-	$course_id = get_post_meta($post->ID, 'Course ID', true);
-?>
