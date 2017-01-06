@@ -9,12 +9,12 @@
 ?>
 
 <?php
-// Post Thumbnail of Parent Or Current Post w/ Default Image
-if ( has_post_thumbnail( $post->ID, 'post-thumbnail' ) ) {
-	echo get_the_post_thumbnail( $post->ID, 'post-thumbnail' );
+	// Post Thumbnail of Parent Or Current Post w/ Default Image
+	if ( has_post_thumbnail( $post->ID ) ) {
+		the_post_thumbnail( 'post-thumbnail', array( 'class' => 'media-fluid' ) );
 	}
-	elseif ( has_post_thumbnail( $post->post_parent, 'post-thumbnail' ) ) {
-		echo get_the_post_thumbnail( $post->post_parent, 'post-thumbnail' );
+	elseif ( has_post_thumbnail( $post->post_parent) ) {
+		echo get_the_post_thumbnail( $post->post_parent, 'post-thumbnail', array( 'class' => 'media-fluid' ) );
 	}
 	else {
 		echo '<img src="'. get_template_directory_uri().'/images/feature/laptop-browsing-2000x475.jpg" alt="'. get_the_title() .'" class="media-fluid">';
