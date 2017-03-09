@@ -13,13 +13,12 @@
 function dhali_event_metabox() {
 	 add_meta_box( 'dhali_event_metabox', __( 'Event Details', 'dhali' ), 'dhali_display_event_fields', 'post', 'side', 'high' );
 }
-add_action( 'admin_init', 'dhali_event_metabox' );
+add_action( 'add_meta_boxes', 'dhali_event_metabox' );
 
 /**
  * Display Event Fields
  */
 function dhali_display_event_fields( $post ) {
-	global $post;
 
 	// Event Date Fields
 	$event_month = get_post_meta( $post->ID, 'event_month', true );
