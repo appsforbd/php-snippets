@@ -13,10 +13,10 @@
  * Register Meta Boxes
  *
  */
-function dhali_register_meta_boxes() {
+function dhali_register_meta_boxes( $post_type, $post ) {
 	add_meta_box( 'dhali_client_url', 'URL', 'dhali_client_url_metabox', 'clients', 'normal', 'high' );
 }
-add_action( 'add_meta_boxes', 'dhali_register_meta_boxes' );
+add_action( 'add_meta_boxes', 'dhali_register_meta_boxes', 10, 2 );
 
 /**
  * Meta box display callback.
