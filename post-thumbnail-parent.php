@@ -23,11 +23,11 @@
 
 <?php
 //Get Post Thumbnail URL of Parent Or Current Post w/ Default Image
-if ( has_post_thumbnail( $post->ID, 'post-thumbnail' ) ) {
+if ( has_post_thumbnail( $post->ID ) ) {
 		$featured_image_url = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'post-thumbnail' );
 		$featured_image_url = $featured_image_url[0];
 	}
-	elseif ( has_post_thumbnail( $post->post_parent, 'post-thumbnail' ) ) {
+	elseif ( has_post_thumbnail( $post->post_parent ) ) {
 		$featured_image_url = wp_get_attachment_image_src( get_post_thumbnail_id( $post->post_parent ), 'post-thumbnail' );
 		$featured_image_url = $featured_image_url[0];
 	}
