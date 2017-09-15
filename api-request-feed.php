@@ -1,4 +1,7 @@
 <?php
+/**
+ * Get API Feed
+ */
 	$clintGuid = 'AC268FD6-4B5F-424D-AF15-035D271632FE';
 	$resourceType = 'Events';
 
