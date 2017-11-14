@@ -6,3 +6,10 @@
  */
 
 $page_url = get_permalink( get_page_by_title( 'Page Name' ) );
+
+/**
+ * Gets page url by title
+ */
+function dhali_page_url($name) {
+  return get_permalink( get_page_by_title( $name ) );
+}
