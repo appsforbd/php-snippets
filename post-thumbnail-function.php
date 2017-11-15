@@ -4,6 +4,8 @@
  */
 
 function dhali_featured_image() {
+  
+    global $post;
 
   // Get Featured Image URL
   if ( has_post_thumbnail( $post->ID ) ) {
@@ -29,6 +31,9 @@ function dhali_featured_image() {
  *
  */
 function dhali_featured_image() { 
+  
+   global $post;
+  
   // checks if post has_post_thumbnail
   if ( has_post_thumbnail( $post->ID ) ) {
     the_post_thumbnail( 'post-thumbnail', array( 'class' => 'media-fluid' ) );
