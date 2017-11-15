@@ -13,7 +13,7 @@ function dhali_page_title() {
     $page_title = 'Cool Client Projects';
 
   elseif ( is_archive() ) :
-    $page_title = the_archive_title();
+    $page_title = get_the_archive_title();
 
   elseif ( is_404() ) :
     $page_title = esc_html_e( 'Oops! That page can&rsquo;t be found.', 'dhali' );
@@ -25,7 +25,7 @@ function dhali_page_title() {
     $page_title = 'Blog';
 
   else :
-    $page_title = single_post_title();
+    $page_title = single_post_title('', false);
 
   endif;
   return $page_title;
